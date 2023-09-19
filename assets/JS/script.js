@@ -21,4 +21,6 @@ $(function () {
     //
     // TODO: Add code to display the current date in the header of the page.
   });
-  
+
+  const theDay = document.querySelector(".currentDay");
+  const past = doc
