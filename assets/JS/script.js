@@ -26,3 +26,5 @@ $(function () {
   const past = document.querySelector(".past");
   const present = document.querySelector(".present");
   const future = document.querySelector(".future");
+
+theDay.textContent(dayjs());
