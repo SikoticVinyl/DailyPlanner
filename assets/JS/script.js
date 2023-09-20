@@ -20,16 +20,13 @@ $(function () {
     // attribute of each time-block be used to do this?
   });
 
-  const theDay = document.querySelector("#currentDay");
-  const past = document.querySelector(".past");
-  const present = document.querySelector(".present");
-  const future = document.querySelector(".future");
-
-  
+  const theDay = document.querySelector("#currentDay"); 
 
 theDay.textContent=dayjs().format("ddd, DD MMM h:mm a");
 
-const currentHour = dayjs().hour();
+$(document).ready(fuction() {
+
+  const currentHour = dayjs().hour();
 
 elements.forEach(element => {
   const hour =parseInt(element.id.split('-')[1]);
@@ -40,4 +37,6 @@ elements.forEach(element => {
   } else {
     element.classList.add("future")
   }
+});
+
 });
