@@ -22,9 +22,9 @@ $(function () {
     // TODO: Add code to display the current date in the header of the page.
   });
 
-  const theDay = document.querySelector(".currentDay");
+  const theDay = document.querySelector("#currentDay");
   const past = document.querySelector(".past");
   const present = document.querySelector(".present");
   const future = document.querySelector(".future");
 
-theDay.textContent(dayjs());
+theDay.textContent=dayjs().format("ddd, DD MMM h:mm a")
