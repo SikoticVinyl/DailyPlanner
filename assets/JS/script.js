@@ -22,19 +22,24 @@ elements.each(function() {
 });
 
 $(".saveBtn").on("click", function() {
-  const blockId =$(this).closest(".time-block").attr("id");
+  let blockId =$(this).closest(".time-block").attr("id");
   const userInput =$(this).siblings(".description").val();
-  const localStorageKey = `time-block-${blockId}`;
+  let localStorageKey = `time-block-${blockId}`;
 
   localStorage.setItem(localStorageKey, userInput);
 
-  const descript =$(".description");
+  const storedInput = localStorage.getItem(localStorageKey);
 
-  localStorage.getItem(localStorageKey).descript.text
-})
+  $(this).siblings(".description").val(storedInput);
+});
 
+elements.each(function() {
+  let blockId =$(this).attr("id");
+  let localStorageKey = `time-block-${blockId}`;
+  const storedInput = localStorage.getItem(localStorageKey);
 
-
+  $(this).find(".description").val(storedInput);
+  });
 });
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
