@@ -41,6 +41,6 @@ elements.each(function() {
   $(this).find(".description").val(storedInput);
   });
 });
-    // TODO: Add code to get any user input that was saved in localStorage and set
-    // the values of the corresponding textarea elements. HINT: How can the id
-    // attribute of each time-block be used to do this?
+
+// left TODO:
+// Make it so that when the day changes it does not pull the same information from the day before. Saving and pausing on coding now to see if this happens naturally or if it needs to be coded in. Assuming it will,
