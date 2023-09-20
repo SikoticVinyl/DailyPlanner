@@ -18,8 +18,6 @@ $(function () {
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
     // attribute of each time-block be used to do this?
-    //
-    // TODO: Add code to display the current date in the header of the page.
   });
 
   const theDay = document.querySelector("#currentDay");
@@ -27,4 +25,19 @@ $(function () {
   const present = document.querySelector(".present");
   const future = document.querySelector(".future");
 
-theDay.textContent=dayjs().format("ddd, DD MMM h:mm a")
+  
+
+theDay.textContent=dayjs().format("ddd, DD MMM h:mm a");
+
+const currentHour = dayjs().hour();
+
+elements.forEach(element => {
+  const hour =parseInt(element.id.split('-')[1]);
+  if (hour < currentHour){
+    element.classList.add("past")
+  } else if (hour === currentHour){
+    element.classList.add("present")
+  } else {
+    element.classList.add("future")
+  }
+});
