@@ -41,6 +41,3 @@ elements.each(function() {
   $(this).find(".description").val(storedInput);
   });
 });
-
-// left TODO:
-// Make it so that when the day changes it does not pull the same information from the day before. Saving and pausing on coding now to see if this happens naturally or if it needs to be coded in. Assuming it will,
